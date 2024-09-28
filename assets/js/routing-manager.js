@@ -1,4 +1,13 @@
 function getCookie(name) {
+
+  // temporarily set to true ( since cookie generation to be done by server )
+  let myCookie = "DataGenieCookie";
+
+  //change to null to see effect of no account
+  return myCookie;
+
+
+
     var dc = document.cookie;
     var prefix = name + "=";
     var begin = dc.indexOf("; " + prefix);
@@ -16,7 +25,10 @@ function getCookie(name) {
     }
     // because unescape has been deprecated, replaced with decodeURI
     //return unescape(dc.substring(begin + prefix.length, end));
-    return decodeURI(dc.substring(begin + prefix.length, end));
+  //UNCOMMENT HERE 
+  // return decodeURI(dc.substring(begin + prefix.length, end));
+
+
 } 
 
 const routes = {
@@ -66,12 +78,16 @@ async function router(path) {
 }
 
 
-async function redirect(){
-  var myCookie = getCookie("DataGenieCookie");
+async function redirect(path){
+  console.log('hi')
+  let myCookie = getCookie("DataGenieCookie");
+  console.log(myCookie)
+
+
   if (myCookie == null) {
     // do cookie doesn't exist stuff;
     // window.location.assign("../src/pages/login")
-    window.location.assign("../../admin");
+    // window.location.assign("../../admin");
     // window.history.pushState({}, "",'/admin');
     // const html = await fetch(routes['/admin'].template).then((res) => res.text());
     // document.querySelector(".app").innerHTML = html;
@@ -80,7 +96,7 @@ async function redirect(){
   }
   else {
     // do cookie exists stuff
-    window.location.assign("../pages/home")
+    window.location.assign(path)
     // window.history.pushState({}, "",path);
     // const html = await fetch(route.template).then((res) => res.text());
     // document.querySelector(".app").innerHTML = html;

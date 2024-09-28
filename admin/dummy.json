@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "Name": "Kirsten Dunn",
+      "Mobile": 60440614475,
+      "Gender": "F",
+      "Email": "kirstendunn@ginkle.com",
+      "Email Verified": true,
+      "Phone Verified": true,
+      "Created at": "2017-10-01T07:55:27 -06:-30",
+      "Updated at": "2014-11-14T09:32:05 -06:-30",
+      "Id": 0,
+      "Role": "developer",
+      "Country Code": 381,
+      "Pilot": false
+    },
+    {
+      "Name": "Beasley Love",
+      "Mobile": 59203003766,
+      "Gender": "M",
+      "Email": "beasleylove@ginkle.com",
+      "Email Verified": true,
+      "Phone Verified": false,
+      "Created at": "2018-07-07T05:40:32 -06:-30",
+      "Updated at": "2017-05-09T11:27:38 -06:-30",
+      "Id": 0,
+      "Role": "developer",
+      "Country Code": 119,
+      "Pilot": true
+    }
+  ],
+
+  "queens": [
+    {
+      "name": "Kirsten Dunn",
+      "bio": "lorem ipsum",
+      "subscription_price": 5000,
+      "instant_call_enabled": true,
+      "profile_pic_resource": null,
+      "streak": 2,
+      "Id": 0,
+      "alias": "kirs",
+      "user_id": "kirsten"
+    },
+    {
+      "name": "Beasley Love",
+      "bio": "lorem ipsum dome",
+      "subscription_price": 4000,
+      "instant_call_enabled": false,
+      "profile_pic_resource": null,
+      "streak": 4,
+      "Id": 1,
+      "alias": "beas",
+      "user_id": "beasley"
+    }
+  ]
+}

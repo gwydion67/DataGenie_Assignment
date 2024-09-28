@@ -25,7 +25,7 @@ return /******/ (function() { // webpackBootstrap
   \***************************/
 /***/ (function() {
 
-eval("document.getElementById('login-button').onclick = function () {\n  document.getElementById(\"formAuthentication\").onsubmit = function () {\n    // validate login creds through api\n    var email = document.getElementById('email').value;\n    var pass = document.getElementById('password').value;\n    if (email == 'admin' && pass == 'admin') {\n      window.location.assign('../dashboard.html');\n    } else {\n      //show error (for this either we have to write a custom error prompt or somehow use the thing vuexy is using)\n      //for now ill just give and alert\n      alert('seems that the password might be wrong');\n    }\n  };\n};\n\n//# sourceURL=webpack://Vuexy/./admin/js/login.js?");
+eval("document.getElementById('login-button').onclick = function () {\n  document.getElementById(\"formAuthentication\").onsubmit = function () {\n    // validate login creds through api\n    var email = document.getElementById('email').value;\n    var pass = document.getElementById('password').value;\n    if (email == 'admin' && pass == 'admin') {\n      window.history.pushState({}, \"\", \"\");\n      window.location.assign('./users/');\n    } else {\n      //show error (for this either we have to write a custom error prompt or somehow use the thing vuexy is using)\n      //for now ill just give and alert\n      alert('seems that the password might be wrong');\n    }\n  };\n};\n\n//# sourceURL=webpack://Vuexy/./admin/js/login.js?");
 
 /***/ })
 
