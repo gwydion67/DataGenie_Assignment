@@ -1,0 +1,45 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(self, function() {
+return /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./admin/js/queens.js":
+/*!****************************!*\
+  !*** ./admin/js/queens.js ***!
+  \****************************/
+/***/ (function() {
+
+eval("\n\nfunction _typeof(o) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o; }, _typeof(o); }\nfunction _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }\nfunction _toPropertyKey(t) { var i = _toPrimitive(t, \"string\"); return \"symbol\" == _typeof(i) ? i : i + \"\"; }\nfunction _toPrimitive(t, r) { if (\"object\" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || \"default\"); if (\"object\" != _typeof(i)) return i; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (\"string\" === r ? String : Number)(t); }\n$(function () {\n  //  Projects table\n  var dt_queens_table = $('.datatable-queens');\n  if (dt_queens_table.length) {\n    var dt_project = dt_queens_table.DataTable({\n      ajax: {\n        url: '../dummy.json',\n        dataSrc: 'queens'\n      },\n      columns: [\n      // \"name\": \"Beasley Love\",\n      // \"bio\": \"lorem ipsum dome\",\n      // \"subscription_price\": 4000,\n      // \"instant_call_enabled\": false,\n      // \"profile_pic_resource\": null,\n      // \"streak\": 4,\n      // \"Id\": 1,\n      // \"alias\": \"beas\",\n      // \"user_id\": \"beasley\"\n      {\n        data: ''\n      }, {\n        data: 'name'\n      }, {\n        data: 'bio'\n      }, {\n        data: 'subscription_price'\n      }, {\n        data: 'instant_call_enabled'\n      }, {\n        data: 'strea'\n      }, {\n        data: 'id'\n      }, {\n        data: 'alias'\n      }, {\n        data: 'user_id'\n      }],\n      columnDefs: [{\n        // For Responsive\n        className: 'control',\n        searchable: false,\n        orderable: false,\n        responsivePriority: 2,\n        targets: 0,\n        render: function render(data, type, full, meta) {\n          return '';\n        }\n      }, _defineProperty({\n        // For Checkboxes\n        targets: 1,\n        orderable: false,\n        searchable: false,\n        responsivePriority: 3,\n        checkboxes: true,\n        render: function render() {\n          return '<input type=\"checkbox\" class=\"dt-checkboxes form-check-input\">';\n        }\n      }, \"checkboxes\", {\n        selectAllRender: '<input type=\"checkbox\" class=\"form-check-input\">'\n      }), {\n        targets: 2,\n        responsivePriority: 4,\n        render: function render(data, type, full, meta) {\n          var $name = full['name'];\n          var $initials = $name.match(/\\b\\w/g) || [];\n          $initials = (($initials.shift() || '') + ($initials.pop() || '')).toUpperCase();\n          var $output;\n          if (full['profile_pic_resource']) {\n            $output = '<span class=\"avatar-initial rounded-circle\">' + '<img src=' + full['profile_pic_resource'] + '></img>' + '</span>';\n          } else {\n            $output = '<span class=\"avatar-initial rounded-circle\">' + $initials + '</span>';\n          }\n\n          // Creates full output for row\n          var $row_output = '<div class=\"d-flex justify-content-left align-items-center\">' + '<div class=\"avatar-wrapper\">' + '<div class=\"avatar avatar-sm me-3\">' + $output + '</div>' + '</div>' + '<div class=\"d-flex flex-column\">' + '<span class=\"text-truncate fw-medium text-heading\">' + $name + '</span>' + '</div>' + '</div>';\n          return $row_output;\n        }\n      }, {\n        targets: 3,\n        responsivePriority: 4,\n        render: function render(data, type, full, meta) {\n          var $bio = full['bio'];\n          return '<span class=\"text-heading\">' + $bio + '</span>';\n        }\n      }, {\n        targets: 4,\n        responsivePriority: 4,\n        render: function render(data, type, full, meta) {\n          var $price = full['subscription_price'];\n          return '<span>' + $price + '</span>';\n        }\n      }, {\n        targets: 5,\n        responsivePriority: 4,\n        render: function render(data, type, full, meta) {\n          var $instant_call_enabled = full['instant_call_enabled'];\n          return '<span class=\"text-heading \">' + $instant_call_enabled + '</span>';\n        }\n      }, {\n        targets: 6,\n        responsivePriority: 4,\n        render: function render(data, type, full, meta) {\n          var $id = full['Id'];\n          return '<span class=\"text-heading\">' + $id + '</span>';\n        }\n      }, {\n        targets: 7,\n        responsivePriority: 4,\n        render: function render(data, type, full, meta) {\n          var $streak = full['streak'];\n          return '<span class=\"text-heading\">' + $streak + '</span>';\n        }\n      }, {\n        targets: 8,\n        responsivePriority: 4,\n        render: function render(data, type, full, meta) {\n          var $alias = full['alias'];\n          return '<span class=\"text-heading\">' + $alias + '</span>';\n        }\n      }, {\n        targets: 9,\n        responsivePriority: 4,\n        render: function render(data, type, full, meta) {\n          var $uid = full['user_id'];\n          return '<span class=\"text-heading\">' + $uid + '</span>';\n        }\n      }],\n      order: [[2, 'desc']],\n      dom: '<\"card-header pb-0 pt-sm-0\"<\"head-label text-center\"><\"d-flex justify-content-center justify-content-md-end\"f>>t<\"row mx-2\"<\"col-sm-12 col-md-6\"i><\"col-sm-12 col-md-6\"p>>',\n      displayLength: 7,\n      lengthMenu: [7, 11, 25, 50, 75, 100],\n      language: {\n        search: '',\n        searchPlaceholder: 'Search User',\n        paginate: {\n          next: '<i class=\"ti ti-chevron-right ti-sm\"></i>',\n          previous: '<i class=\"ti ti-chevron-left ti-sm\"></i>'\n        }\n      },\n      responsive: {\n        details: {\n          display: $.fn.dataTable.Responsive.display.modal({\n            header: function header(row) {\n              var data = row.data();\n              return 'Details of user \"' + data['Name'];\n            }\n          }),\n          type: 'column',\n          renderer: function renderer(api, rowIdx, columns) {\n            var data = $.map(columns, function (col, i) {\n              return col.title !== '' // ? Do not show row in modal popup if title is blank (for check box)\n              ? '<tr data-dt-row=\"' + col.rowIndex + '\" data-dt-column=\"' + col.columnIndex + '\">' + '<td>' + col.title + ':' + '</td> ' + '<td>' + col.data + '</td>' + '</tr>' : '';\n            }).join('');\n            return data ? $('<table class=\"table\"/><tbody />').append(data) : false;\n          }\n        }\n      }\n    });\n    $('div.head-label').html('<h5 class=\"card-title mb-0\">Users </h5>');\n  }\n\n  // Filter form control to default size\n  // ? setTimeout used for multilingual table initialization\n  setTimeout(function () {\n    $('.dataTables_filter .form-control').removeClass('form-control-sm');\n    $('.dataTables_length .form-select').removeClass('form-select-sm');\n  }, 300);\n});\n\n//# sourceURL=webpack://Vuexy/./admin/js/queens.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./admin/js/queens.js"]();
+/******/ 	
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
+});
